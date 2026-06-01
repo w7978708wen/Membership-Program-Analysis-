@@ -9,11 +9,20 @@ The Sales Activity Data table documents every purchase, including the member who
 The Rewards Activity Data documents every points redemption transaction made, including the member who made the redemption, points used, retailer which the points are redeemed at, and redemption date. 
 <br><br>
 
+<h2>Data Preprocessing</h2>
+I converted binary categorical variables' values from "Y" and "N" to "1" and "0". This is because regression models require variables to be represented numerically so that the model can estimate variable coefficients.
+
+I also removed outlier values from variables. For example, one observation contained a reported age of 119, which is substantially outside the typical age range observed in the dataset and may indicate a data-entry error. To improve data quality and reduce the influence of potentially erroneous observations on the analyses, the record was removed before
+conducting statistical tests and modelling on the remaining dataset.
+
 <h2>Exploratory Data Analysis</h2>
-Firstly, I wanted to understand the overall distribution of key variables within the dataset, such as members' program satisfaction ratings. 
+There are two main approaches I took to better understand the datasets: generating new variables and analyzing the distribution of some important variables.
+
+<h3>Creating new variables</h3>
+To support subsequent analyses, I created new variables including Current Age, Total Spend Amount, Total Redemption Amount, Total Sales Transactions, Average Transaction Value, and Latest Sales Date. These variables provide additional insights into customer purchasing behaviour, engagement with the loyalty program, and overall customer value.
 
 <h3>Descriptive Statistics</h3>
-To achieve this, I used Excel's Descriptive Statistics tool on the Program Satisfaction Rating column in the Member Profile Data table. This allowed me to examine measures such as the mean, median, standard deviation, minimum, and maximum values. It provides me with an initial understanding of overall member sentiment toward the membership program. 
+Firstly, I wanted to understand the overall distribution of key variables within the dataset, such as members' program satisfaction ratings. To achieve this, I used Excel's Descriptive Statistics tool on the Program Satisfaction Rating column in the Member Profile Data table. This allowed me to examine measures such as the mean, median, standard deviation, minimum, and maximum values. It provides me with an initial understanding of overall member sentiment toward the membership program. 
 
 The descriptive statistics also helps to identify whether ratings are concentrated around a particular range and whether there are unusually low or high ratings (such as 10s and 1s). If there are outliers, this may justify further investigation to better understand differences in customer experiences across the membership base.
 
@@ -36,5 +45,8 @@ The ANOVA test evaluates whether there is statistically significant evidence tha
 The ANOVA output produced a p-value of 0.97, which is substantially greater than the significance level (α = 0.05). Therefore, I fail to reject the null hypothesis. Based on the sample data, there is insufficient statistical evidence to conclude that program satisfaction differs across cities. This conclusion is also consistent with the output table, which shows relatively similar mean satisfaction ratings across the cities.
 <br><br>
 From a business perspective, this suggests that customer satisfaction with the membership program is relatively consistent across geographic locations, suggesting that we should explore other factors that may impact membership program satisfaction scores. 
+
+<h2>Business Question 2. Factors that have an impact on satisfaction</h2>
+
 
 
