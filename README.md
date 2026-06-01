@@ -1,4 +1,4 @@
-The objective is to analyze the effectiveness of the membership program where customers earn points when making purchases at participating retailers and can later redeem those points as dollar credits toward future purchases.
+The objective is to analyze various aspects, such as program satisfaction, in the membership program where customers earn points when making purchases at participating retailers and can later redeem those points as dollar credits toward future purchases.
 
 The simulated dataset consists of 3 data tables: Member Profile Data, Transaction Data, and Rewards Activity Data. 
 
