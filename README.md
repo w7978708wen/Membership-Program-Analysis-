@@ -19,7 +19,7 @@ conducting statistical tests and modelling on the remaining dataset.
 There are two main approaches I took to better understand the datasets: generating new variables and analyzing the distribution of some important variables.
 
 <h3>Creating new variables</h3>
-To support subsequent analyses, I created new variables including Current Age, Total Spend Amount, Total Redemption Amount, Total Sales Transactions, Average Transaction Value, and Latest Sales Date. These variables provide additional insights into customer purchasing behaviour, engagement with the loyalty program, and overall customer value.
+To support subsequent analyses, I created new variables including Current Age, Total Spend Amount, Total Redemption Amount, Purchase Count, Average Transaction Value, and Latest Sales Date. These variables provide additional insights into customer purchasing behaviour, engagement with the loyalty program, and overall customer value.
 
 <h3>Descriptive Statistics</h3>
 Firstly, I wanted to understand the overall distribution of key variables within the dataset, such as members' program satisfaction ratings. To achieve this, I used Excel's Descriptive Statistics tool on the Program Satisfaction Rating column in the Member Profile Data table. This allowed me to examine measures such as the mean, median, standard deviation, minimum, and maximum values. It provides me with an initial understanding of overall member sentiment toward the membership program. 
@@ -47,6 +47,16 @@ The ANOVA output produced a p-value of 0.97, which is substantially greater than
 From a business perspective, this suggests that customer satisfaction with the membership program is relatively consistent across geographic locations, suggesting that we should explore other factors that may impact membership program satisfaction scores. 
 
 <h2>Business Question 2. Factors that have an impact on satisfaction</h2>
+
+The City variable is a categorical variable that can take in more than 2 possible values. Therefore, I chose to use one-way ANOVA F-test to evaluate whether program satisfaction differed across cities, rather than including City directly in the multiple linear regression model.
+
+For the remaining predictor variables, which include newly created variables like Total Sales Amount, they are tested through multiple linear regression (stepwise regression). I chose stepwise regression because I only want to include statistically significant predictor variables in the model, in order to help the model to focus on learning meaningful patterns instead of noise from insignificant variables. 
+
+<img src="https://github.com/w7978708wen/Membership-Program-Analysis-/blob/main/Supporting%20Visuals/program_sat_rating%20multiple%20linear%20regression.png" width="500">
+
+Based on the output, program satisfaction tends to be higher among members who do not own a credit card, male members, and members who report higher satisfaction with each of the three participating retailers. Although PurchaseCount is statistically significant (p = 0.003), its coefficient is relatively small compared to the retailer satisfaction variables, suggesting that transaction frequency has a weaker influence on overall program satisfaction. 
+
+Overall, the model has a relatively high R-squared of 0.72, indicating that approximately 72% of the variation in program satisfaction can be explained by the 6 predictor variables included in the model. Furthermore, the model’s p-value (1.4E-1.06) is lower than alpha (0.05), indicating that the model is statistically significant and provides meaningful insights into the factors associated with membership program satisfaction.
 
 
 
