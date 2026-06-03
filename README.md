@@ -78,7 +78,7 @@ The analysis can also help the team design operational strategies, such as alloc
 
 The results show that members across all spending tiers are primarily concentrated in Cities 1 and 4. Although the concentration of Tier 1 members is not substantially different from the other tiers, the findings still support the proposed operational strategy. In this case, I would recommend allocating more high-demand products to stores in Cities 1 and 4, as these locations are likely to experience the highest customer traffic. This increases the likelihood that sought-after products are sold efficiently while also providing a more convenient shopping experience, which may encourage higher customer spending and improve customer satisfaction.
 
-<h2>Limitation to analysis</h2>
+<h2>Limitation to Analysis</h2>
 
 One limitation of this analysis is that many of the derived variables, such as Total Spend Amount, Total Redemption Amount, Purchase Count, and Average Transaction Value, were aggregated across all three participating retailers. As a result, the analyses identify trends at the overall loyalty program level rather than at the individual retailer level.
 
